@@ -11,7 +11,7 @@ class Post(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Date de création')
 
     def __unicode__(self):
-        return '{0} | {1}'.format(self.creation_date, self.title)
+        return '{0} | {1}'.format(self.creation_date.stfrdate('%d/%m/%Y'), self.title)
 
     class Meta:
         verbose_name = 'Article'
