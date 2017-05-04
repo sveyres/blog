@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from .views import home
+from .views import *
 
 urlpatterns = [
-    url(r'^$', home)
+    url(r'^$', home),
+    url(r'^post/list', post_list)
 ]
