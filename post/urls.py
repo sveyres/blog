@@ -3,5 +3,6 @@ from .views import *
 
 urlpatterns = [
     url(r'^$', home),
-    url(r'^post/list', post_list)
+    url(r'^post/list$', post_list),
+    url(r'^post/\d+/$', post_details)
 ]
