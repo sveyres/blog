@@ -5,7 +5,7 @@
 
     <ul>
     {% for post in posts %}
-        <li>[{{post.creation_date|date:'d/m/y - H:i:s'}}] - <a href="/post/{{post.id}}">{{post.title}}</a></li>
+        <li>[{{post.creation_date|date:'d/m/y - H:i:s'}}] - <a href="{% url 'post-details' p_id=post.id%}">{{post.title}}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

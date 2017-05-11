@@ -13,5 +13,8 @@ class Post(models.Model):
     def __unicode__(self):
         return '{0} | {1}'.format(self.creation_date.stfrdate('%d/%m/%Y'), self.title)
 
+    def get_slug(self):
+        return self.title.replace(" ", "-").lower()
+
     class Meta:
         verbose_name = 'Article'
