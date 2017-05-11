@@ -6,5 +6,21 @@ from .models import Post, Category
 
 # Register your models here.
 
-admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    model = Post
+    list_display = ('id', 'title', 'creation_date', 'category')
+    list_filter = ('category',)
+    search_fields = ('title', 'body')
+    list_editable = ('category',)
+    fieldsets = (
+        (None, {
+            'fields': (('title', 'category'),)
+        }),
+        ('Contenu', {
+            'fields': ('body',),
+            'classes': ('collapse',)
+        })
+    )
+
+admin.site.register(Post, PostAdmin)
 admin.site.register(Category)
