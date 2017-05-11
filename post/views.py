@@ -15,3 +15,7 @@ def post_list(request):
 def post_details(request, p_id):
     post = Post.objects.get(id=p_id)
     return render(request, 'post_details.html', {'post': post})
+
+def post_details_slug(request, p_slug):
+    post = Post.objects.get(slug=p_slug)
+    return render(request, 'post_details.html', {'post': post})
