@@ -8,7 +8,7 @@ from autoslug import AutoSlugField
 
 class Post(models.Model):
     title = models.CharField(max_length=60, verbose_name='Titre')
-    slug = AutoSlugField(populate_from='title')
+    slug = AutoSlugField(populate_from='title', always_update=True)
     body = models.TextField(verbose_name='Contenu')
     creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Date de création')
 
