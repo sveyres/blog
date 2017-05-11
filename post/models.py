@@ -11,12 +11,19 @@ class Post(models.Model):
     slug = AutoSlugField(populate_from='title')
     body = models.TextField(verbose_name='Contenu')
     creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Date de création')
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
     def __unicode__(self):
         return '{0} | {1}'.format(self.creation_date, self.title)
 
-    def get_slug(self):
-        return self.title.replace(" ", "-").lower()
-
     class Meta:
         verbose_name = 'Article'
+
+class Category(models.Model):
+    label = models.CharField(max_length=20, verbose_name='Label')
+
+    def __unicode__(self):
+        return self.label
+
+    class Meta:
+        verbose_name = 'Catégorie'
