@@ -1,0 +1,9 @@
+@import "../../../blog/static/sass/_base.scss";
+@import "../../../blog/static/sass/_variables.scss";
+
+body {
+    h1 {
+        color: $color;
+        background-color: lightgrey;
+    }
+}
