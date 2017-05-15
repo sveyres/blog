@@ -147,6 +147,12 @@ BOWER_INSTALLED_APPS = (
    'fontawesome'
 )
 
+SASS_PROCESSOR_INCLUDE_DIRS = [
+     os.path.join(BASE_DIR, "blog/static/sass")
+]
+
+
+
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, "static")
 
 SASS_PROCESSOR_ENABLED = True
