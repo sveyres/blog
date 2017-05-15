@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Article{% endblock %}
 {% block content %}
-    <h1>{{post.title}}</h1>
-    <span>{{post.creation_date}}</span>
-    <p>{{post.body}}</p>
+    <article class="panel panel-default details">
+        <div class="panel-heading">
+            <h1>{{post.title}}</h1>
+        </div>
+        <div class="panel-body">
+            <p>{{post.body}}</p>
+        </div>
+        <div class="panel-footer">
+            <p>{{post.creation_date}}</p>
+        </div>
+    </article>
 {% endblock %}

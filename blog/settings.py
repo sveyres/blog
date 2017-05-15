@@ -148,7 +148,8 @@ BOWER_INSTALLED_APPS = (
 )
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
-     os.path.join(BASE_DIR, "blog/static/sass")
+     os.path.join(BASE_DIR, "blog/static/sass"),
+     os.path.join(BASE_DIR, "static/bower_components/bootstrap-sass/assets/stylesheets")
 ]
 
 

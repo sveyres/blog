@@ -6,7 +6,7 @@
     <ul>
     {% for post in posts %}
         <li>
-            <article class="panel panel-default">
+            <article class="panel panel-default preview">
                 <div class="panel-heading">
                     <h2><a href="{% url 'post-details' p_slug=post.slug%}">{{post.title}}</a></h2>
                 </div>

@@ -10,20 +10,26 @@ body {
     ul {
         list-style: none;
         padding: 0;
-        
-        article.panel {
-            h2 {
-                margin: 0;
-            }
+    }
 
+    article.panel {
+        h2 {
+            margin: 0;
+        }
+
+        &.preview {
             .panel-body {
                 height: 3.9em;
                 overflow: hidden;
             }
+        }
 
-            .panel-footer p {
-                margin: 0;
-            }
+        &.details {
+            margin-top: 5em;
+        }
+
+        .panel-footer p {
+            margin: 0;
         }
     }
 }
