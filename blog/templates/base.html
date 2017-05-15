@@ -1,13 +1,18 @@
+{% load sass_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% sass_src 'sass/style.scss' %}">
+        <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
     </body>
 </html>
