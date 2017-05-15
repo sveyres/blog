@@ -4,6 +4,26 @@
 body {
     h1 {
         color: $color;
-        background-color: lightgrey;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        
+        article.panel {
+            h2 {
+                margin: 0;
+            }
+
+            .panel-body {
+                height: 3.9em;
+                overflow: hidden;
+            }
+
+            .panel-footer p {
+                margin: 0;
+            }
+        }
     }
 }

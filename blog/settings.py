@@ -143,7 +143,7 @@ STATICFILES_FINDERS = [
 
 BOWER_INSTALLED_APPS = (
    'jquery',
-   'bootstrap',
+   'bootstrap-sass',
    'fontawesome'
 )
 

@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %}Liste des articles{% endblock %}
 {% block content %}
-    <h1>Liste des articles</h1>
+    <h1>Les articles</h1>
 
     <ul>
     {% for post in posts %}
-        <li>[{{post.creation_date|date:'d/m/y - H:i:s'}}] - <a href="{% url 'post-details' p_slug=post.slug%}">{{post.title}}</a></li>
+        <li>
+            <article class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><a href="{% url 'post-details' p_slug=post.slug%}">{{post.title}}</a></h2>
+                </div>
+                <div class="panel-body">
+                    <p>{{post.body}}</p>
+                </div>
+                <div class="panel-footer">
+                    <p>{{post.creation_date|date:'d/m/y - H:i:s'}}</p>
+                </div>
+            </article>
+        </li>
     {% endfor %}
     </ul>
 {% endblock %}
